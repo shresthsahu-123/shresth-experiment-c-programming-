@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-void demo() {
-    int local = 10; // Local variable
-    printf("Inside function: %d\n", local);
+int globalVar = 10; // Global variable
+
+void func() {
+    printf("Inside func: %d\n", globalVar); // Accessible here
 }
 
 int main() {
-    demo();
-    printf("Outside function: %d\n",); // Error! 'local' not accessible here
+    func();
+    printf("Inside main: %d\n", globalVar); // Accessible here
     return 0;
 }
+
